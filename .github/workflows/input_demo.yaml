@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to env
-        run: echo "run on ${{ .inputs.environment }}"
+        run: echo "run on ${{ inputs.environment }}"

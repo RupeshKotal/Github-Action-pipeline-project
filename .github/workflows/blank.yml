@@ -15,7 +15,7 @@ jobs:
         run: echo "Runuing test case"
   deploy:
      runs-on: ubuntu-latest
-     needs: test
+     needs: test  # create dependency
      steps:
        - name: Deploymber
          run: echo "running deployment steps"

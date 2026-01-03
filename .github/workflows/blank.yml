@@ -1,6 +1,16 @@
 name: Hello World
 # on: workflow_dispatch  # manual trigger
-on: push
+on: 
+  push:
+    branches:
+      - main
+      - devlop
+      - 'release/**'
+  
+  pull_request:
+    branches:
+      - main
+      
 jobs:
   build:
     runs-on: ubuntu-latest

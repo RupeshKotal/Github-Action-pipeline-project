@@ -6,6 +6,7 @@ on:
       - main
       - devlop
       - 'release/**'
+      - master
   
   pull_request:
     types:

@@ -1,7 +1,8 @@
 name: Static_s3_deploy
 on:
   push:
-    - main
+    branches:
+      - main
 jobs:
   deploy:
     runs-on: ubuntu_latest

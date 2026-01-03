@@ -1,34 +1,34 @@
-name: Hello World
-# on: workflow_dispatch  # manual trigger
-on: 
-  push:
-    branches:
-      - main
-      - devlop
-      - 'release/**'
-      - master
+# name: Hello World
+# # on: workflow_dispatch  # manual trigger
+# on: 
+#   push:
+#     branches:
+#       - main
+#       - devlop
+#       - 'release/**'
+#       - master
   
-  pull_request:
-    types:
-      - opened
-    branches:
-      - main
+#   pull_request:
+#     types:
+#       - opened
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: build step
-        run:  echo "A build Job name, ${{ secrets.DOCKER_PASSWORD }}"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Test step
-        run: echo "Runuing test case ${{ vars.MY_NAME }}"
-  deploy:
-     runs-on: ubuntu-latest
-     needs: test  # create dependency
-     steps:
-       - name: Deploymber
-         run: echo "running deployment steps"  #
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps: 
+#       - name: build step
+#         run:  echo "A build Job name, ${{ secrets.DOCKER_PASSWORD }}"
+#   test:
+#     runs-on: ubuntu-latest
+#     needs: build
+#     steps:
+#       - name: Test step
+#         run: echo "Runuing test case ${{ vars.MY_NAME }}"
+#   deploy:
+#      runs-on: ubuntu-latest
+#      needs: test  # create dependency
+#      steps:
+#        - name: Deploymber
+#          run: echo "running deployment steps"  #

@@ -1,0 +1,10 @@
+name: Checkout-action
+on: push
+jobs:
+  checkout:
+    runs_on: ubuntu_latest
+    step:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print Index.html
+        run: cat index.html

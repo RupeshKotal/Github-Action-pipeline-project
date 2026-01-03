@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: build step
-        run:  echo "A build Job name =" ${{ vars.MY_NAME }}
+        run:  echo "A build Job name, ${{ secrets.DOCKER_PASSWORD }}"
   test:
     runs-on: ubuntu-latest
     needs: build

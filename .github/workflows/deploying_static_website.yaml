@@ -17,7 +17,7 @@ jobs:
           aws-region: us-east-1
       - name: Code Static code
         run: |
-           aws s3 sync ./ s3://Github-Action-pipeline-project/ \
+           aws s3 sync ./ s3://s3-bucket-43211234/ \
            --exclude "*" \
            --include "index.html"
         

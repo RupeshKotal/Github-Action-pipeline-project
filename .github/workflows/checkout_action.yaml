@@ -1,5 +1,5 @@
 name: Checkout-action
-on: push
+on: workflow_dispatch
 jobs:
   checkout:
     runs-on: ubuntu_latest
